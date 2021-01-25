@@ -42,7 +42,7 @@ For assessing a COI metabarcode dataset,  ORFfinder pseodugene removal has been 
 
 This method is similar to method 1 above, except that the longest ORFs were queried against a COI HMM profile using hmmscan (HMMER) as described in the manuscript.  The sequence bit scores were assessed and the smallest were excluded as putativ pseudogenes if they were outliers (as described sbove for short outliers).
 
-For assessing a DNA barcode dataset, I recommend running ORFfinder and HMMER at the command line.  HMMER is available from http://hmmer.org/ .  A COI hmm profile is available as a part of the SCVUC COI metabarcode pipeline v4.3.0 https://github.com/Hajibabaei-Lab/SCVUC_COI_metabarcode_pipeline/releases/tag/v4.3.0.  All 5 files starting with the prefix bold.hmm need to be downloaded.  Starting with the longest ORFs (aa) from ORFfinder, hmmscan can be run.
+For assessing a DNA barcode dataset, I recommend running ORFfinder and HMMER at the command line.  HMMER is available from http://hmmer.org/ .  A COI HMM profile is available as a part of the SCVUC COI metabarcode pipeline v4.3.0 https://github.com/Hajibabaei-Lab/SCVUC_COI_metabarcode_pipeline/releases/tag/v4.3.0.  All 5 files starting with the prefix bold.hmm need to be downloaded.  Starting with the longest ORFs (aa) from ORFfinder, hmmscan can be run.
 
 ```linux
 # to get ORFs (aa)
