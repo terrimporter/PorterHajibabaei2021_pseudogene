@@ -62,7 +62,7 @@ a. The output of this script will be a dataset with 100,000 randomly chosen sequ
 perl mutate.plx bold.nt.fasta
 ```
 
-These files can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
+The output of this script can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
 
 b. The output of this script will be datasets with sequences as described above but they will be half-length (~ 300bp).  This script is meant to be used with the fasta files from above.
 
@@ -70,15 +70,25 @@ b. The output of this script will be datasets with sequences as described above 
 perl chop_in_half.plx mutated_0.fasta
 ```
 
-These files can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
+The output of this script can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
 
-c. The output of this script will be datasts with sequences as described above but with double the proportion of pseudogenes.
+c. The output of this script will be datasets with sequences as described above but with double the proportion of pseudogenes.
 
 ```linux
 perl mutate2.plx bold.nt.fasta
 ```
 
-These files can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
+The output of this script can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
+
+d. The output of this script will be datasets with sequences as described above but with half the proportion of pseudogenes.
+
+```linux
+perl mutate3.plx bold.nt.fasta
+```
+
+The output of this script can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
+
+e. 
 
 
 
