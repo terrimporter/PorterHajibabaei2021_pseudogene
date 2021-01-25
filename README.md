@@ -34,9 +34,25 @@ For assessing a DNA barcode dataset, I recommend running ORFfinder from the comm
 ORFfinder -in file.fasta -ml 30 -g 5 -s 2 -n true -strand plus -out file.nt.fasta -outfmt 1
 ```
 
+The longest ORF for each sequence can then be parsed from the ORFfinder output.
+
+For assessing a COI metabarcode dataset,  ORFfinder pseodugene removal has been integrated into SCVUC COI metabarcode pipeline v4.1.0 available from https://github.com/Hajibabaei-Lab/SCVUC_COI_metabarcode_pipeline/releases/tag/v4.1.0.  This snakemake pipeline begins with raw paired-end COI Illumina reads.
+
 ### Pseudogene filtering method 2 - ORFfinder + HMM profile analysis
 
 This method is similar to method 1 above, except that the longest ORFs were queried against a COI HMM profile using hmmscan (HMMER) as described in the manuscript.  The sequence bit scores were assessed and the smallest were excluded as putativ pseudogenes if they were outliers (as described sbove for short outliers).
+
+For assessing a DNA barcode dataset, I recommend running ORFfinder and HMMER at the command line.  HMMER is available from http://hmmer.org/ .  A COI hmm profile is available as a part of the SCVUC COI metabarcode pipeline v4.3.0 https://github.com/Hajibabaei-Lab/SCVUC_COI_metabarcode_pipeline/releases/tag/v4.3.0.  All 5 files starting with the prefix bold.hmm need to be downloaded.  Starting with the longest ORFs (aa) from ORFfinder, hmmscan can be run.
+
+```linux
+# to get ORFs (aa)
+ORFfinder -in file.fasta -ml 30 -g 5 -s 2 -n true -strand plus -out file.aa.fasta -outfmt 2
+
+# parse out longest ORFs from ORFfinder output
+
+# compare longest ORFs to a COI profile
+hmmscan --tblout hmmer.out bold.hmm longest.orfs.nt.fasta
+```
 
 ### Part A - Simulate DNA barcode datasets
 
