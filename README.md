@@ -8,7 +8,19 @@ Infiles and scripts can be downloaded from https://github.com/terrimporter/Porte
 
 ### Pseudogene filtering method 1 - ORFfinder
 
+In this method, ORFfinder was used to translate nucleotide sequences into open reading frames (ORFs) (nt) and the longest ORF was retained as described in the manuscript.  The lengths of the resulting ORFs were assessed and the smallest and longest ORFs were excluded as putative pseudogenes if they were outliers. 
 
+The cutoff for short outliers :
+
+25th percentile - (1.5 * interquartile range)
+
+The cutoff for long outliers :
+
+75th percentile + (1.5 * interquartile range)
+
+### Pseudogene filtering method 2 - ORFfinder + HMM profile analysis
+
+This method is similar to method 1 above, except that the longest ORFs were queried against a COI HMM profile using hmmscan (HMMER) as described in the manuscript.  The sequence bit scores were assessed and the smallest were excluded as putativ pseudogenes if they were outliers (as described sbove for short outliers).
 
 ### Part A - Simulate DNA barcode datasets
 
