@@ -6,7 +6,7 @@ Infiles and scripts can be downloaded from https://github.com/terrimporter/Porte
 
 ## Simulations and Analyses
 
-### Part A
+### Part A - Simulate DNA barcode datasets
 
 1. Retrieve a set of COI gene sequences from BOLD: 
 
@@ -52,7 +52,15 @@ a. Nucleotide sequence files are available here at ~/PartA_DNA_barcode_simulatio
 
 a. The nucleotide gene sequences from all 10 species were combined into a single file, as were the pseudogene sequences.  The same was done for the amino acid sequnces.  These files are available here at ~/PartA_DNA_barcode_simulation/dNdS .  These files can be used with TRANALIGN to generate a codon alignments that can be analyzed in [R] to assess dN/dS ratios as described in the manuscript.
 
-## Scripts
+### Part B - Simulate metabarcode datasets
+
+1. Use the COI gene sequences from BOLD to create a mock metabarcode community.  The output of this script will be a dataset with 100,000 randomly chosen sequences, a dataset where some of the sequences have been pseudogenized to reduce GC content, and a dataset where some of the sequences have been pseudogenized by introducing indels.  The parameters for how sequencs are picked and pseudogenized are at the top of the file and can be edited: the number of sequences to sample [100000], the proportion of sequences to pseudogenize [0.19], percentage of bases targeted to reduce GC content [0.025], percentage of bases to introduce an indel [0.025].
+
+```linux
+perl mutate.plx bold.nt.fasta
+```
+
+
 
 
 ## References
