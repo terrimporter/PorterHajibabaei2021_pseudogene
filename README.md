@@ -58,9 +58,9 @@ hmmscan --tblout hmmer.out bold.hmm longest.orfs.nt.fasta
 
 1. Retrieve a set of COI gene sequences from BOLD:  
 a. BOLD data releases can be downloaded from https://v3.boldsystems.org/index.php/datarelease .  The output of this script is a set of tsv (tab separated values) files.
-```linux
-zsh getBOLDdataReleases.sh releases.txt
-```  
+    ```linux
+    zsh getBOLDdataReleases.sh releases.txt
+    ```  
 b. Retrieved tsv files can be parsed to retrieve the nucleotide and amino acid sequences in FASTa format.  In the script, edit to include the path to the directory where the BOLD tsv files are located.  You will need the names.dmp and nodes.dmp files from the taxdmp.zip files that can be downloadd from NCBI at https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/ .  In the script, edit to include the path to names.dmp and nodes.dmp.  The output of this script is bold.nt.fasta and bold.aa.fasta .
 
 ```linux
