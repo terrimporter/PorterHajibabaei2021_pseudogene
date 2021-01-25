@@ -140,7 +140,15 @@ The output of this script can be used to assess length and GC content as well as
 
 The dataset used for this analysis was originally published by Hajibabaei et al., 2019.  This is a COI freshwater benthos metabarcode dataset where 6 different primer sets were used so the amplicons span differnt portions of the COI barcode region.
 
+Raw reads are available from the NCBI SRA # PRJNA545426 .
 
+1. Process raw reads using the standard pipeline SCVUC v4.3.0 that uses ORFfinder + HMM profile analysis to remove putative pseudogenes.
+
+2. Process raw reads with a modified pipeline that KEEPS rare reads, i.e., skips the rare sequence removal steps.  The modified files needed to run this pipeline are available here at ~/PartC_freshwater_benthos_COI_metabarcoding_real_example/SCVUC-4.3.0-keep_rare .
+
+3. Process raw reads with a modified pipeline that KEEPS noisy sequences, i.e., skips the denoising step.  The modified file needed to run this pipeline is available here at ~/PartC_freshwater_benthos_COI_metabarcoding_real_example/SCVUC-4.3.0-keep_noise .
+
+4. Process raw reads with a modified pipeline that KEEPS chimeric sequences, i.e., skips the chimera removal step.  The modified file needed to run this pipeline is available here at ~/PartC_freshwater_benthos_COI_metabarcoding_real_example/SCVUC-4.3.0-keep_chimeras .
 
 ## References
 
