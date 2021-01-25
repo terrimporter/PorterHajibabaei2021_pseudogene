@@ -42,6 +42,8 @@ perl messedup_fasta_to_strict_fasta.plx < pseudogenes.fasta > pseudogenes.fasta.
 perl parse_pseudogenes.plx pseudogenes.fasta.strict bold.nt.fasta bold.aa.fasta
 ```
 
+These files can now be used to assess length, GC contact, and to test pseudogene filtering methods.
+
 ## Scripts
 
 
