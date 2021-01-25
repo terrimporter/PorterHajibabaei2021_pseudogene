@@ -27,6 +27,13 @@ The cutoff for long outliers :
 
 75th percentile + (1.5 * interquartile range)
 
+For assessing a DNA barcode dataset, I recommend running ORFfinder from the command line.  ORFfinder can be downloaded from NCBI at https://ftp.ncbi.nlm.nih.gov/genomes/TOOLS/ORFfinder/linux-i64/ .  
+
+```linux
+# to get ORFs (nt)
+ORFfinder -in file.fasta -ml 30 -g 5 -s 2 -n true -strand plus -out file.nt.fasta -outfmt 1
+```
+
 ### Pseudogene filtering method 2 - ORFfinder + HMM profile analysis
 
 This method is similar to method 1 above, except that the longest ORFs were queried against a COI HMM profile using hmmscan (HMMER) as described in the manuscript.  The sequence bit scores were assessed and the smallest were excluded as putativ pseudogenes if they were outliers (as described sbove for short outliers).
