@@ -49,4 +49,4 @@ perl parse_pseudogenes.plx pseudogenes.fasta.strict bold.nt.fasta bold.aa.fasta
 
 Porter, T.M., Hajibabaei, M. (2021) Profile hidden Markov model sequence analysis can help remove putative pseudogenes from DNA barcoding and metabarcoding datasets.  BioRxiv.
 
-Last updated: January 24, 2021
+Last updated: January 25, 2021
