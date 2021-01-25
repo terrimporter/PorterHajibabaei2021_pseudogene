@@ -56,7 +56,7 @@ hmmscan --tblout hmmer.out bold.hmm longest.orfs.nt.fasta
 
 ### Part A - Simulate DNA barcode datasets
 
-1. Retrieve a set of COI gene sequences from BOLD: 
+1. Retrieve a set of COI gene sequences from BOLD:  
 a. BOLD data releases can be downloaded from https://v3.boldsystems.org/index.php/datarelease .  The output of this script is a set of tsv (tab separated values) files.
 
 ```linux
