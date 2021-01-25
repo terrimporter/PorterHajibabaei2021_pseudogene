@@ -4,7 +4,9 @@ This repository contains the dataflows, infiles, and scripts I used in the paper
 
 Infiles and scripts can be downloaded from https://github.com/terrimporter/PorterHajibabaei2021_pseudogene/releases .
 
-## Simulations and Analyses
+## Overview of methods, simulations, and analyses
+
+[1. Pseudogene filtering method 1 - ORFfinder](#Pseudogene-filtering-mthod-1---ORFfinder)
 
 ### Pseudogene filtering method 1 - ORFfinder
 
