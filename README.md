@@ -6,6 +6,10 @@ Infiles and scripts can be downloaded from https://github.com/terrimporter/Porte
 
 ## Simulations and Analyses
 
+### Pseudogene filtering method 1 - ORFfinder
+
+
+
 ### Part A - Simulate DNA barcode datasets
 
 1. Retrieve a set of COI gene sequences from BOLD: 
@@ -88,11 +92,15 @@ perl mutate3.plx bold.nt.fasta
 
 The output of this script can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
 
-e. 
+### Part C - Filter pseudogenes from a real freshwater benthos COI metabarcode dataset.
+
+The dataset used for this analysis was originally published by Hajibabaei et al., 2019.  This is a COI freshwater benthos metabarcode dataset where 6 different primer sets were used so the amplicons span differnt portions of the COI barcode region.
 
 
 
 ## References
+
+Hajibabaei, M., Porter, T.M., Wright, M., Rudar, J. (2019) COI metabarcoding primr choice affects richness and recovery of indicator taxa in freshwater systems.  PLoS ONE, 14(9): e0220953.
 
 Porter, T.M., Hajibabaei, M. (2021) Profile hidden Markov model sequence analysis can help remove putative pseudogenes from DNA barcoding and metabarcoding datasets.  BioRxiv.
 
