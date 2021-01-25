@@ -6,14 +6,14 @@ Infiles and scripts can be downloaded from https://github.com/terrimporter/Porte
 
 ## Overview of methods
 
-[Pseudogene filtering method 1 - ORFfinder](#Pseudogene-filtering-mthod-1---ORFfinder).  
-[Pseudogene filtering method 2 - ORFfinder + HMM profile analysis](#Pseudogene-filtering-mthod-2---ORFfinder-+-profile-analysis).  
+[Pseudogene filtering method 1 - ORFfinder](#Pseudogene-filtering-mthod-1---ORFfinder)  
+[Pseudogene filtering method 2 - ORFfinder + HMM profile analysis](#Pseudogene-filtering-mthod-2---ORFfinder-+-profile-analysis)  
 
 ## Overview of simulations and analyses
 
-[Part A - Simulate DNA barcode datasets](#Part-A---Simulate-DNA-barcode-datasets).   
-[Part B - Simulate metabarcode datasets](#Part-B---Simulate-metabarcode-datasets).   
-[Part C - Filter pseudogenes from a real freshwater benthos COI metabarcode dataset](#Part-C---Filter-pseudogenes-from-a-real-freshwater-benthos-COI-metabarcode-dataset).  
+[Part A - Simulate DNA barcode datasets](#Part-A---Simulate-DNA-barcode-datasets)   
+[Part B - Simulate metabarcode datasets](#Part-B---Simulate-metabarcode-datasets)   
+[Part C - Filter pseudogenes from a real freshwater benthos COI metabarcode dataset](#Part-C---Filter-pseudogenes-from-a-real-freshwater-benthos-COI-metabarcode-dataset)  
 
 ### Pseudogene filtering method 1 - ORFfinder
 
