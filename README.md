@@ -54,13 +54,23 @@ a. The nucleotide gene sequences from all 10 species were combined into a single
 
 ### Part B - Simulate metabarcode datasets
 
-1. Use the COI gene sequences from BOLD to create a mock metabarcode community.  The output of this script will be a dataset with 100,000 randomly chosen sequences, a dataset where some of the sequences have been pseudogenized to reduce GC content, and a dataset where some of the sequences have been pseudogenized by introducing indels.  The parameters for how sequencs are picked and pseudogenized are at the top of the file and can be edited: the number of sequences to sample [100000], the proportion of sequences to pseudogenize [0.19], percentage of bases targeted to reduce GC content [0.025], percentage of bases to introduce an indel [0.025].
+1. Use the COI gene sequences from BOLD to create a mock metabarcode community.  
+
+a. The output of this script will be a dataset with 100,000 randomly chosen sequences (mutated_0.fasta), a dataset where some of the sequences have been pseudogenized to reduce GC content (mutated_1.fasta), and a dataset where some of the sequences have been pseudogenized by introducing indels (mutated_2.fasta).  The parameters for how sequencs are picked and pseudogenized are at the top of the file and can be edited: the number of sequences to sample [100000], the proportion of sequences to pseudogenize [0.19], percentage of bases targeted to reduce GC content [0.025], percentage of bases to introduce an indel [0.025].  The outfile mutated_0.fasta is a set of control sequences with no pseudogenes simulated.  
 
 ```linux
 perl mutate.plx bold.nt.fasta
 ```
 
+These files can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
 
+b. The output of this script will be datasets with sequences as described above but they will be half-length (~ 300bp).  This script is meant to be used with the fasta files from above.
+
+```linux
+perl chop_in_half.plx mutated_0.fasta
+```
+
+These files can be used to assess length and GC content as well as for testing with two different pseudogene filtering methods.
 
 
 ## References
