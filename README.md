@@ -6,7 +6,11 @@ Infiles and scripts can be downloaded from https://github.com/terrimporter/Porte
 
 ## Overview of methods, simulations, and analyses
 
-[1. Pseudogene filtering method 1 - ORFfinder](#Pseudogene-filtering-mthod-1---ORFfinder)
+[1. Pseudogene filtering method 1 - ORFfinder](#Pseudogene-filtering-mthod-1---ORFfinder). 
+[2. Pseudogene filtering method 2 - ORFfinder + HMM profile analysis](#Pseudogene-filtering-mthod-2---ORFfinder-+-profile-analysis). 
+[3. Part A - Simulate DNA barcode datasets](#Part-A---Simulate-DNA-barcode-datasets).  
+[4. Part B - Simulate metabarcode datasets](#Part-B---Simulate-metabarcode-datasets).  
+[5. Part C - Filter pseudogenes from a real freshwater benthos COI metabarcode dataset](#Part-C---Filter-pseudogenes-from-a-real-freshwater-benthos-COI-metabarcode-dataset).  
 
 ### Pseudogene filtering method 1 - ORFfinder
 
@@ -106,7 +110,7 @@ perl mutate3.plx bold.nt.fasta
 
 The output of this script can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
 
-### Part C - Filter pseudogenes from a real freshwater benthos COI metabarcode dataset.
+### Part C - Filter pseudogenes from a real freshwater benthos COI metabarcode dataset
 
 The dataset used for this analysis was originally published by Hajibabaei et al., 2019.  This is a COI freshwater benthos metabarcode dataset where 6 different primer sets were used so the amplicons span differnt portions of the COI barcode region.
 
