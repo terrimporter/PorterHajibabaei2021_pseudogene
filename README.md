@@ -6,8 +6,8 @@ Infiles and scripts can be downloaded from https://github.com/terrimporter/Porte
 
 ## Overview of methods
 
-[Pseudogene filtering method 1 - ORFfinder](#Pseudogene-filtering-mthod-1---ORFfinder)  
-[Pseudogene filtering method 2 - ORFfinder + HMM profile analysis](#Pseudogene-filtering-mthod-2---ORFfinder-+-profile-analysis)  
+[Pseudogene filtering method 1 - ORFfinder](#Pseudogene-filtering-method-1---ORFfinder)  
+[Pseudogene filtering method 2 - ORFfinder + HMM profile analysis](#Pseudogene-filtering-method-2---ORFfinder-+-profile-analysis)  
 
 ## Overview of simulations and analyses
 
@@ -54,14 +54,14 @@ ORFfinder -in file.fasta -ml 30 -g 5 -s 2 -n true -strand plus -out file.aa.fast
 hmmscan --tblout hmmer.out bold.hmm longest.orfs.nt.fasta
 ```
 
-### Part A - Simulate DNA barcode datasets
+### Part A - Creating an artificial DNA barcode dataset
 
 1. Retrieve a set of COI gene sequences from BOLD:  
 a. BOLD data releases can be downloaded from https://v3.boldsystems.org/index.php/datarelease .  The output of this script is a set of tsv (tab separated values) files.
     ```linux
     zsh getBOLDdataReleases.sh releases.txt
     ```  
-b. Retrieved tsv files can be parsed to retrieve the nucleotide and amino acid sequences in FASTa format.  In the script, edit to include the path to the directory where the BOLD tsv files are located.  You will need the names.dmp and nodes.dmp files from the taxdmp.zip files that can be downloadd from NCBI at https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/ .  In the script, edit to include the path to names.dmp and nodes.dmp.  The output of this script is bold.nt.fasta and bold.aa.fasta .
+b. Retrieved tsv files can be parsed to retrieve the nucleotide and amino acid sequences in FASTA format.  In the script, edit to include the path to the directory where the BOLD tsv files are located.  You will need the names.dmp and nodes.dmp files from the taxdmp.zip files that can be downloadd from NCBI at https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/ .  In the script, edit to include the path to names.dmp and nodes.dmp.  The output of this script is bold.nt.fasta and bold.aa.fasta .
 
 ```linux
 perl parse_BOLD_data_releases3.plx
@@ -97,17 +97,17 @@ a. Nucleotide sequence files are available here at ~/PartA_DNA_barcode_simulatio
 
 a. The nucleotide gene sequences from all 10 species were combined into a single file, as were the pseudogene sequences.  The same was done for the amino acid sequnces.  These files are available here at ~/PartA_DNA_barcode_simulation/dNdS .  These files can be used with TRANALIGN to generate a codon alignments that can be analyzed in [R] to assess dN/dS ratios as described in the manuscript.
 
-### Part B - Simulate metabarcode datasets
+### Part B - Create perturbed community datasets
 
-1. Use the COI gene sequences from BOLD to create a mock metabarcode community.  
+1. Use the COI gene sequences from BOLD to create a perturbed community datasets.  
 
-a. The output of this script will be a dataset with 100,000 randomly chosen sequences (mutated_0.fasta), a dataset where some of the sequences have been pseudogenized to reduce GC content (mutated_1.fasta), and a dataset where some of the sequences have been pseudogenized by introducing indels (mutated_2.fasta).  The parameters for how sequencs are picked and pseudogenized are at the top of the file and can be edited: the number of sequences to sample [100000], the proportion of sequences to pseudogenize [0.19], percentage of bases targeted to reduce GC content [0.025], percentage of bases to introduce an indel [0.025].  The outfile mutated_0.fasta is a set of control sequences with no pseudogenes simulated.  
+a. The output of this script will be a dataset with 100,000 randomly chosen sequences (mutated_0.fasta), a dataset where some of the sequences have been pseudogenized by inserting GC -> AT point mutations to reduce GC content (mutated_1.fasta), and a dataset where some of the sequences have been pseudogenized by inserting frameshift mutations by introducing indels (mutated_2.fasta).  The parameters for how sequencs are picked and pseudogenized are at the top of the file and can be edited: the number of sequences to sample [100000], the proportion of sequences to pseudogenize [0.19], percentage of bases targeted to reduce GC content [0.025], percentage of bases to introduce an indel [0.025].  The outfile mutated_0.fasta is a set of control sequences with no pseudogenes simulated.  
 
 ```linux
 perl mutate.plx bold.nt.fasta
 ```
 
-The output of this script can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
+The output of this script can be used to assess length and GC content as well as for testing with two different pseudogene filtering methods.
 
 b. The output of this script will be datasets with sequences as described above but they will be half-length (~ 300bp).  This script is meant to be used with the fasta files from above.
 
@@ -133,7 +133,7 @@ perl mutate3.plx bold.nt.fasta
 
 The output of this script can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
 
-### Part C - Filter pseudogenes from a real freshwater benthos COI metabarcode dataset
+### Part C - Filter pseudogenes from a freshwater benthos COI metabarcode dataset
 
 The dataset used for this analysis was originally published by Hajibabaei et al., 2019.  This is a COI freshwater benthos metabarcode dataset where 6 different primer sets were used so the amplicons span differnt portions of the COI barcode region.
 
@@ -153,4 +153,4 @@ Hajibabaei, M., Porter, T.M., Wright, M., Rudar, J. (2019) COI metabarcoding pri
 
 Porter, T.M., Hajibabaei, M. (2021) Profile hidden Markov model sequence analysis can help remove putative pseudogenes from DNA barcoding and metabarcoding datasets.  BioRxiv.
 
-Last updated: January 25, 2021
+Last updated: March 25, 2021
