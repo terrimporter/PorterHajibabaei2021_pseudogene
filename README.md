@@ -153,8 +153,9 @@ Raw reads are available from the NCBI SRA # PRJNA545426 .
 
 ### Scripts to generate figures in the manuscript
 
-Fig 2 - 
-Fig 3 - 
+Fig 2 - The R script Fig2_PartA.R uses the infiles gene_test.fasta and pseudogene_test.fasta to calculate GC content; the infiles gene_test.nt.fasta.filtered and pseudogene_tets.nt.fasta.filtered to calculate the length of the longest ORF from ORFfinder; and gene_test.txt and pseudogene_test.txt to calculate bitscores from HMMER3.
+
+Fig 3 - The R script Fig3_PartB.R uses the infiles mutated_0.nt.fasta.filtered, mutated_1.nt.fasta.filtered, and mutated_2.nt.fasta.filtered to calculate the length of the longest ORFs from ORFfinder; and mutated_0.txt, mutated_1.txt, and mutated_2.txt to calculate bitscores from HMMER3.
 
 ## References
 
