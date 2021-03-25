@@ -15,6 +15,10 @@ Infiles and scripts can be downloaded from https://github.com/terrimporter/Porte
 [Part B - Simulate metabarcode datasets](#Part-B---Simulate-metabarcode-datasets)   
 [Part C - Filter pseudogenes from a real freshwater benthos COI metabarcode dataset](#Part-C---Filter-pseudogenes-from-a-real-freshwater-benthos-COI-metabarcode-dataset)  
 
+## Scripts used to generate figures in the manuscript
+
+[Scripts to generate figures in the manuscript](#Scripts-to-generate-figures-in-the-manuscript)
+
 ### Pseudogene filtering method 1 - ORFfinder
 
 In this method, ORFfinder was used to translate nucleotide sequences into open reading frames (ORFs) (nt) and the longest ORF was retained as described in the manuscript.  The lengths of the resulting ORFs were assessed and the smallest and longest ORFs were excluded as putative pseudogenes if they were outliers. 
@@ -146,6 +150,11 @@ Raw reads are available from the NCBI SRA # PRJNA545426 .
 3. Process raw reads with a modified pipeline that KEEPS noisy sequences, i.e., skips the denoising step.  The modified file needed to run this pipeline is available here at ~/PartC_freshwater_benthos_COI_metabarcoding_real_example/SCVUC-4.3.0-keep_noise .
 
 4. Process raw reads with a modified pipeline that KEEPS chimeric sequences, i.e., skips the chimera removal step.  The modified file needed to run this pipeline is available here at ~/PartC_freshwater_benthos_COI_metabarcoding_real_example/SCVUC-4.3.0-keep_chimeras .
+
+### Scripts to generate figures in the manuscript
+
+Fig 2 - 
+Fig 3 - 
 
 ## References
 
