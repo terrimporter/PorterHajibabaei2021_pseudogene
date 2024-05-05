@@ -58,7 +58,7 @@ ORFfinder -in file.fasta -ml 30 -g 5 -s 2 -n true -strand plus -out file.aa.fast
 hmmscan --tblout hmmer.out bold.hmm longest.orfs.nt.fasta
 ```
 
-### Part A - Creating an artificial DNA barcode dataset
+### Part A - Simulate DNA barcode datasets
 
 1. Retrieve a set of COI gene sequences from BOLD:  
 a. BOLD data releases can be downloaded from https://v3.boldsystems.org/index.php/datarelease .  The output of this script is a set of tsv (tab separated values) files.
@@ -101,7 +101,7 @@ a. Nucleotide sequence files are available here at ~/PartA_DNA_barcode_simulatio
 
 a. The nucleotide gene sequences from all 10 species were combined into a single file, as were the pseudogene sequences.  The same was done for the amino acid sequnces.  These files are available here at ~/PartA_DNA_barcode_simulation/dNdS .  These files can be used with TRANALIGN to generate a codon alignments that can be analyzed in [R] to assess dN/dS ratios as described in the manuscript.
 
-### Part B - Create perturbed community datasets
+### Part B - Simulate metabarcode datasets
 
 1. Use the COI gene sequences from BOLD to create a perturbed community datasets.  
 
@@ -137,7 +137,7 @@ perl mutate3.plx bold.nt.fasta
 
 The output of this script can be used to assess length and GC content as well as for testing with two diffrent pseudogene filtering methods.
 
-### Part C - Filter pseudogenes from a freshwater benthos COI metabarcode dataset
+### Part C - Filter pseudogenes from a real freshwater benthos COI metabarcode dataset
 
 The dataset used for this analysis was originally published by Hajibabaei et al., 2019.  This is a COI freshwater benthos metabarcode dataset where 6 different primer sets were used so the amplicons span differnt portions of the COI barcode region.
 
